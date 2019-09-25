@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import styled from "styled-components";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Wrapper = styled.div``;
 const Header = styled.div`
@@ -44,6 +45,11 @@ const NavItem = styled.div`
     font-weight: 600;
 
     letter-spacing: 1.5px;
+  }
+
+  & h4:hover {
+    cursor: pointer;
+    color: #f6f6f6;
   }
 `;
 
@@ -182,22 +188,46 @@ function App() {
         </div>
         <NavBar className="row middle-xs center-xs">
           <NavItem className="col-xs-6">
-            <h4>about</h4>
+            <h4>
+              <Link
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="about"
+              >
+                {" "}
+                about
+              </Link>
+            </h4>
           </NavItem>
           <NavItem className="col-xs-6">
-            <h4>contact </h4>
+            <h4>
+              <Link
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="contact"
+              >
+                {" "}
+                contact
+              </Link>
+            </h4>
           </NavItem>
         </NavBar>
       </Header>
       <AboutWrapper className="row middle-xs center-xs">
-        <div className="col-xs-11">
+        <div id="about" className="col-xs-11">
           <h1>Our team rapidly delivers flawless and aerodynamic content.</h1>
           <h2>Hire us Today</h2>
         </div>
       </AboutWrapper>
       <ContactWrapper className="row center-xs">
         <div className="col-xs-6">
-          <h1>Contact Us.</h1>
+          <h1 id="contact">Contact Us.</h1>
           <h2>We'd love to hear from you.</h2>
           <Form name="contact" method="POST" data-netlify="true">
             <NameLabel>

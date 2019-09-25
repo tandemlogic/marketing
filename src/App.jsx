@@ -3,9 +3,10 @@ import "./App.css";
 import styled from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  overflow-y: hidden;
+`;
 const Header = styled.div`
-  height: 800px;
   background-image: linear-gradient(
     to right bottom,
     #efeb0f,
@@ -30,10 +31,12 @@ const Header = styled.div`
   & span {
     font-weight: 900;
   }
+  padding-top: 10%;
+  padding-bottom: 15%;
 `;
 
 const NavBar = styled.div`
-  margin-top: -38%;
+  margin-top: -8%;
 `;
 
 const NavItem = styled.div`
@@ -164,7 +167,8 @@ const Button = styled.button`
 `;
 
 const AboutWrapper = styled.div`
-  height: 700px;
+  padding-top: 15%;
+  padding-bottom: 15%;
 
   & h1 {
     font-size: 70px;

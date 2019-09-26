@@ -1,37 +1,43 @@
 import React from "react";
 import "./App.css";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-scroll";
 
+const GlobalStyle = createGlobalStyle`
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
 const Wrapper = styled.div`
-  overflow-y: hidden;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 `;
 
 const Header = styled.div`
   background-image: linear-gradient(
     to right bottom,
-    #efeb0f,
-    #efeb0f,
-    #efeb0f,
-    #efeb0f,
-    #efeb0f,
-    #f0ed33,
-    #f2ef49,
-    #f3f15b,
-    #f6f57e,
-    #f9f89e,
-    #fcfcbd,
-    #ffffdb
+    #716bd1,
+    #7d77d5,
+    #8984d8,
+    #9590db,
+    #a19dde,
+    #a9a5e1,
+    #b1aee4,
+    #b9b6e7,
+    #bfbceb,
+    #c5c3ef,
+    #ccc9f2,
+    #d2d0f6
   );
+
+  color: #444;
 
   & h1 {
     font-size: 120px;
-    opacity: 0.9;
   }
 
-  & span {
-    font-weight: 900;
-  }
   padding-top: 10%;
   padding-bottom: 15%;
 `;
@@ -44,7 +50,7 @@ const NavItem = styled.div`
   padding: 45px;
 
   & h4 {
-    color: white;
+    color: #eee;
     font-size: 26px;
     font-weight: 600;
 
@@ -182,6 +188,7 @@ const AboutWrapper = styled.div`
 function App() {
   return (
     <Wrapper>
+      <GlobalStyle />
       <Header className="row middle-xs center-xs">
         <div className="col-xs-12">
           <h1>Tandem Logic</h1>

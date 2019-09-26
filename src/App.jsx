@@ -36,11 +36,11 @@ const Header = styled.div`
 
   & h1 {
     font-size: 120px;
-    font-weight: 500;
+    font-weight: 900;
   }
 
   & span {
-    font-weight: 200;
+    font-weight: 450;
   }
 
   padding-top: 10%;

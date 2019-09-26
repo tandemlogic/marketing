@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
 import styled from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Wrapper = styled.div`
   overflow-y: hidden;
 `;
+
 const Header = styled.div`
   background-image: linear-gradient(
     to right bottom,
@@ -56,8 +57,7 @@ const NavItem = styled.div`
   }
 `;
 
-// Contact Styles
-
+// Contact styles
 const ContactWrapper = styled.div`
   background-color: #f6f6f6;
   margin-top: 5%;
@@ -127,8 +127,6 @@ const EmailLabel = styled.label`
   }
 `;
 
-const Form = styled.form``;
-
 const TextAreaLabel = styled.label`
   & h4 {
     color: black;
@@ -180,15 +178,13 @@ const AboutWrapper = styled.div`
     font-weight: 100;
   }
 `;
+
 function App() {
   return (
     <Wrapper>
       <Header className="row middle-xs center-xs">
         <div className="col-xs-12">
-          <h1>
-            {" "}
-            Tandem <span>Logic.</span>{" "}
-          </h1>
+          <h1>Tandem Logic</h1>
         </div>
         <NavBar className="row middle-xs center-xs">
           <NavItem className="col-xs-6">
@@ -226,14 +222,15 @@ function App() {
       <AboutWrapper className="row middle-xs center-xs">
         <div id="about" className="col-xs-11">
           <h1>Our team rapidly delivers flawless and aerodynamic content.</h1>
-          <h2>Hire us Today</h2>
+          <h2>Hire Us Today</h2>
         </div>
       </AboutWrapper>
       <ContactWrapper className="row center-xs">
         <div className="col-xs-6">
-          <h1 id="contact">Contact Us.</h1>
+          <h1 id="contact">Contact Us</h1>
           <h2>We'd love to hear from you.</h2>
-          <Form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <NameLabel>
               <h4>Your Name</h4>
               <input type="text" name="name" placeholder="Your name..."></input>
@@ -252,7 +249,7 @@ function App() {
               ></textarea>
             </TextAreaLabel>
             <Button type="submit">Send</Button>
-          </Form>
+          </form>
         </div>
       </ContactWrapper>
     </Wrapper>

@@ -126,6 +126,31 @@ const ContactWrapper = styled.div`
     margin-top: -5%;
     margin-bottom: 10%;
   }
+
+  @media (min-width: 150px) and (max-width: 400px) {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+    &&& h4 {
+      font-size: 15px;
+    }
+  }
+  @media (min-width: 401px) and (max-width: 700px) {
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  @media (min-width: 150px) and (max-width: 300px) {
+    &&& .querybut {
+      font-size: 10px;
+      padding: 10px;
+      width: 40%;
+    }
+  }
 `;
 
 const NameLabel = styled.label`
@@ -231,6 +256,17 @@ const AboutWrapper = styled.div`
     opacity: 0.5;
     font-weight: 100;
   }
+
+  @media (min-width: 150px) and (max-width: 400px) {
+    h1 {
+      font-size: 25px;
+    }
+  }
+  @media (min-width: 401px) and (max-width: 700px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
 `;
 
 function App() {
@@ -283,7 +319,7 @@ function App() {
         </div>
       </AboutWrapper>
       <ContactWrapper className="row center-xs">
-        <div className="col-xs-6">
+        <div className="col-xs-12 col-sm-6">
           <h1 id="contact">Contact Us</h1>
           <h2>We'd love to hear from you.</h2>
           <form name="contact" method="POST" data-netlify="true">
@@ -305,7 +341,9 @@ function App() {
                 name="message"
               ></textarea>
             </TextAreaLabel>
-            <Button type="submit">Send</Button>
+            <Button className="querybut" type="submit">
+              Send
+            </Button>
           </form>
         </div>
       </ContactWrapper>

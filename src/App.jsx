@@ -197,7 +197,7 @@ function App() {
       <Header className="row middle-xs center-xs">
         <div className="col-xs-12">
           <h1>
-            <span>Tandem</span> Logic
+            <span>Tandem</span>Logic
           </h1>
         </div>
         <NavBar className="row middle-xs center-xs">

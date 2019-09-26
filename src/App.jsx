@@ -184,10 +184,7 @@ function App() {
     <Wrapper>
       <Header className="row middle-xs center-xs">
         <div className="col-xs-12">
-          <h1>
-            {" "}
-            Tandem <span>Logic.</span>{" "}
-          </h1>
+          <h1>Tandem Logic</h1>
         </div>
         <NavBar className="row middle-xs center-xs">
           <NavItem className="col-xs-6">
@@ -225,14 +222,14 @@ function App() {
       <AboutWrapper className="row middle-xs center-xs">
         <div id="about" className="col-xs-11">
           <h1>Our team rapidly delivers flawless and aerodynamic content.</h1>
-          <h2>Hire us Today</h2>
+          <h2>Hire Us Today</h2>
         </div>
       </AboutWrapper>
       <ContactWrapper className="row center-xs">
         <div className="col-xs-6">
           <h1 id="contact">Contact Us</h1>
           <h2>We'd love to hear from you.</h2>
-          <form name="contact" method="POST" data-netlify="true" action="/">
+          <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <NameLabel>
               <h4>Your Name</h4>

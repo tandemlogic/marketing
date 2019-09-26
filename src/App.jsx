@@ -45,6 +45,36 @@ const Header = styled.div`
 
   padding-top: 10%;
   padding-bottom: 15%;
+
+  @media (min-width: 150px) and (max-width: 249px) {
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 250px) and (max-width: 359px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  @media (min-width: 360px) and (max-width: 499px) {
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  @media (min-width: 500px) and (max-width: 584px) {
+    h1 {
+      font-size: 85px;
+    }
+  }
+
+  @media (min-width: 585px) and (max-width: 700px) {
+    h1 {
+      font-size: 100px;
+    }
+  }
 `;
 
 const NavBar = styled.div`
@@ -65,6 +95,19 @@ const NavItem = styled.div`
   & h4:hover {
     cursor: pointer;
     color: #f6f6f6;
+  }
+
+  @media (min-width: 150px) and (max-width: 384px) {
+    link,
+    h4 {
+      font-size: 12px;
+    }
+  }
+  @media (min-width: 385px) and (max-width: 700px) {
+    link,
+    h4 {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -201,7 +244,7 @@ function App() {
           </h1>
         </div>
         <NavBar className="row middle-xs center-xs">
-          <NavItem className="col-xs-6">
+          <NavItem className="col-xs-12 col-sm-6">
             <h4>
               <Link
                 activeClass="active"
@@ -216,7 +259,7 @@ function App() {
               </Link>
             </h4>
           </NavItem>
-          <NavItem className="col-xs-6">
+          <NavItem className="col-xs-12 col-sm-6">
             <h4>
               <Link
                 activeClass="active"

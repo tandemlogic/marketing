@@ -36,6 +36,11 @@ const Header = styled.div`
 
   & h1 {
     font-size: 120px;
+    font-weight: 500;
+  }
+
+  & span {
+    font-weight: 200;
   }
 
   padding-top: 10%;
@@ -191,7 +196,9 @@ function App() {
       <GlobalStyle />
       <Header className="row middle-xs center-xs">
         <div className="col-xs-12">
-          <h1>Tandem Logic</h1>
+          <h1>
+            <span>Tandem</span> Logic
+          </h1>
         </div>
         <NavBar className="row middle-xs center-xs">
           <NavItem className="col-xs-6">
@@ -239,17 +246,17 @@ function App() {
           <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <NameLabel>
-              <h4>Your Name</h4>
+              <h4>Name</h4>
               <input type="text" name="name" placeholder="Your name..."></input>
             </NameLabel>
 
             <EmailLabel>
-              <h4>Your Email</h4>
+              <h4>Email</h4>
               <input type="email" name="email" placeholder="Your email..." />
             </EmailLabel>
 
             <TextAreaLabel>
-              <h4>Your Message</h4>
+              <h4>Message</h4>
               <textarea
                 placeholder="Leave a message..."
                 name="message"

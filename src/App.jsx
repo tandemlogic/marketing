@@ -36,7 +36,7 @@ const Header = styled.div`
 
   & h1 {
     font-size: 120px;
-    font-weight: 900;
+    font-weight: 800;
   }
 
   & span {

@@ -3,7 +3,7 @@ import "./App.css";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-scroll";
 import elliot from "./images/elliot.png";
-
+import wes from "./images/Wes.png";
 const GlobalStyle = createGlobalStyle`
   body, html {
     width: 100%;
@@ -26,6 +26,16 @@ const Elliot = styled.div`
   margin-top: 5%;
 `;
 
+const Wes = styled.div`
+  background-image: url(${wes});
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+`;
+
 const AboutWrapperInfo = styled.div`
   margin-top: -14%;
   padding-bottom: 10%;
@@ -35,6 +45,9 @@ const Wrapper = styled.div`
   padding-left: 0.5rem;
 `;
 
+const Info = styled.div`
+  margin-bottom: -10%;
+`;
 const Header = styled.div`
   background-image: linear-gradient(
     to right bottom,
@@ -336,14 +349,15 @@ function App() {
         <Avatars id="about" className="col-xs-12 col-sm-4">
           <Elliot></Elliot>
         </Avatars>
+
         <Avatars className="col-xs-12 col-sm-4">
-          <Elliot></Elliot>
+          <Wes></Wes>
         </Avatars>
         <Avatars className="col-xs-12 col-sm-4">
           <Elliot></Elliot>
         </Avatars>
       </AboutWrapper>
-      <AboutWrapperInfo className="row center-xs">
+      {/* <AboutWrapperInfo className="row center-xs">
         <Avatars id="about" className="col-xs-4">
           <h1>yo yo g</h1>
         </Avatars>
@@ -353,7 +367,7 @@ function App() {
         <Avatars className="col-xs-4">
           <h1>yo yo g</h1>
         </Avatars>
-      </AboutWrapperInfo>
+      </AboutWrapperInfo> */}
       <ContactWrapper className="row center-xs">
         <div className="col-xs-12 col-sm-6">
           <h1 id="contact">Contact Us</h1>

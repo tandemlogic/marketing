@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-scroll";
+import elliot from "./images/elliot.png";
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -10,6 +11,25 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Avatars = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Elliot = styled.div`
+  background-image: url(${elliot});
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+`;
+
+const AboutWrapperInfo = styled.div`
+  margin-top: -14%;
+  padding-bottom: 10%;
+`;
 const Wrapper = styled.div`
   padding-right: 0.5rem;
   padding-left: 0.5rem;
@@ -313,11 +333,27 @@ function App() {
         </NavBar>
       </Header>
       <AboutWrapper className="row middle-xs center-xs">
-        <div id="about" className="col-xs-11">
-          <h1>Our team rapidly delivers flawless and aerodynamic content.</h1>
-          <h2>Hire Us Today</h2>
-        </div>
+        <Avatars id="about" className="col-xs-12 col-sm-4">
+          <Elliot></Elliot>
+        </Avatars>
+        <Avatars className="col-xs-12 col-sm-4">
+          <Elliot></Elliot>
+        </Avatars>
+        <Avatars className="col-xs-12 col-sm-4">
+          <Elliot></Elliot>
+        </Avatars>
       </AboutWrapper>
+      <AboutWrapperInfo className="row center-xs">
+        <Avatars id="about" className="col-xs-4">
+          <h1>yo yo g</h1>
+        </Avatars>
+        <Avatars className="col-xs-4">
+          <h1>yo yo g</h1>
+        </Avatars>
+        <Avatars className="col-xs-4">
+          <h1>yo yo g</h1>
+        </Avatars>
+      </AboutWrapperInfo>
       <ContactWrapper className="row center-xs">
         <div className="col-xs-12 col-sm-6">
           <h1 id="contact">Contact Us</h1>

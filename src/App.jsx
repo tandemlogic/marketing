@@ -36,10 +36,6 @@ const Wes = styled.div`
   margin-top: 5%;
 `;
 
-const AboutWrapperInfo = styled.div`
-  margin-top: -14%;
-  padding-bottom: 10%;
-`;
 const Wrapper = styled.div`
   padding-right: 0.5rem;
   padding-left: 0.5rem;

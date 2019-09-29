@@ -349,9 +349,7 @@ function App() {
         <Avatars className="col-xs-12 col-sm-4">
           <Wes></Wes>
         </Avatars>
-        <Avatars className="col-xs-12 col-sm-4">
-          <Elliot></Elliot>
-        </Avatars>
+        <Avatars className="col-xs-12 col-sm-4">{/* <Dad></Dad> */}</Avatars>
       </AboutWrapper>
       {/* <AboutWrapperInfo className="row center-xs">
         <Avatars id="about" className="col-xs-4">

@@ -123,6 +123,14 @@ const AboutWrapperInfoTwo = styled.div`
       font-size: 10px;
     }
   }
+  @media (min-width: 351px) and (max-width: 600px) {
+    p {
+      font-size: 12px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+  }
 `;
 const Header = styled.div`
   background-image: linear-gradient(
@@ -238,7 +246,7 @@ const ContactWrapper = styled.div`
 
   @media (min-width: 150px) and (max-width: 400px) {
     h1 {
-      font-size: 30px;
+      font-size: 25px;
     }
     h2 {
       font-size: 15px;
@@ -249,7 +257,10 @@ const ContactWrapper = styled.div`
   }
   @media (min-width: 401px) and (max-width: 700px) {
     h1 {
-      font-size: 50px;
+      font-size: 40px;
+    }
+    &&& h4 {
+      font-size: 15px;
     }
   }
 

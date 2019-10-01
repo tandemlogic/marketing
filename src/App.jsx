@@ -4,10 +4,23 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-scroll";
 import elliot from "./images/elliot.png";
 import wes from "./images/Wes.png";
+import doug from "./images/doug.png";
+
 const GlobalStyle = createGlobalStyle`
   body, html {
     width: 100%;
     height: 100%;
+  }
+`;
+
+const MeetMessage = styled.div`
+  margin-top: 12%;
+  margin-bottom: -10%;
+  & h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
   }
 `;
 
@@ -36,13 +49,42 @@ const Wes = styled.div`
   margin-top: 5%;
 `;
 
+const Doug = styled.div`
+  background-image: url(${doug});
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+`;
+
 const Wrapper = styled.div`
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 `;
 
-const Info = styled.div`
-  margin-bottom: -10%;
+const AboutWrapperInfo = styled.div`
+  margin-top: -15%;
+  text-transform: uppercase;
+  & h2 {
+    font-weight: 400;
+  }
+`;
+
+const AboutWrapperInfoTwo = styled.div`
+  margin-top: -2.5%;
+  padding-bottom: 10%;
+
+  & h4 {
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  & p {
+    font-size: 14px;
+    margin-left: 22%;
+    margin-right: 22%;
+  }
 `;
 const Header = styled.div`
   background-image: linear-gradient(
@@ -341,27 +383,47 @@ function App() {
           </NavItem>
         </NavBar>
       </Header>
+      <MeetMessage className="row center-xs">
+        <div className="col-xs-12">
+          <h1>Meet the Team</h1>
+        </div>
+      </MeetMessage>
       <AboutWrapper className="row middle-xs center-xs">
-        <Avatars id="about" className="col-xs-12 col-sm-4">
+        <Avatars id="about" className="col-xs-4">
           <Elliot></Elliot>
         </Avatars>
-
-        <Avatars className="col-xs-12 col-sm-4">
+        <Avatars className="col-xs-4 ">
           <Wes></Wes>
         </Avatars>
-        <Avatars className="col-xs-12 col-sm-4">{/* <Dad></Dad> */}</Avatars>
+        <Avatars className="col-xs-4">
+          <Doug></Doug>
+        </Avatars>
       </AboutWrapper>
-      {/* <AboutWrapperInfo className="row center-xs">
+      <AboutWrapperInfo className="row center-xs">
         <Avatars id="about" className="col-xs-4">
-          <h1>yo yo g</h1>
+          <h2>Elliot Bonneville</h2>
         </Avatars>
         <Avatars className="col-xs-4">
-          <h1>yo yo g</h1>
+          <h2>Wesley Bonneville</h2>
         </Avatars>
         <Avatars className="col-xs-4">
-          <h1>yo yo g</h1>
+          <h2>Douglas Bonneville</h2>
         </Avatars>
-      </AboutWrapperInfo> */}
+      </AboutWrapperInfo>
+      <AboutWrapperInfoTwo className="row center-xs">
+        <div className="col-xs-4">
+          <h4>Latrine Wiper</h4>
+          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+        </div>
+        <div className="col-xs-4">
+          <h4>God Designer</h4>
+          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+        </div>
+        <div className="col-xs-4">
+          <h4>"Lil" Douglas</h4>
+          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+        </div>
+      </AboutWrapperInfoTwo>
       <ContactWrapper className="row center-xs">
         <div className="col-xs-12 col-sm-6">
           <h1 id="contact">Contact Us</h1>

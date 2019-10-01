@@ -27,6 +27,36 @@ const MeetMessage = styled.div`
 const Avatars = styled.div`
   display: flex;
   justify-content: center;
+  @media (min-width: 150px) and (max-width: 350px) {
+    .elliotimg,
+    .wesimg,
+    .dougimg {
+      height: 50px;
+      width: 50px;
+    }
+    h2 {
+      font-size: 10px;
+    }
+  }
+  @media (min-width: 351px) and (max-width: 600px) {
+    .elliotimg,
+    .wesimg,
+    .dougimg {
+      height: 100px;
+      width: 100px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+  }
+  @media (min-width: 601 px) and (max-width: 950px) {
+    .elliotimg,
+    .wesimg,
+    .dougimg {
+      height: 120px;
+      width: 120px;
+    }
+  }
 `;
 
 const Elliot = styled.div`
@@ -85,6 +115,14 @@ const AboutWrapperInfoTwo = styled.div`
     margin-left: 22%;
     margin-right: 22%;
   }
+  @media (min-width: 150px) and (max-width: 350px) {
+    p {
+      font-size: 8px;
+    }
+    h4 {
+      font-size: 10px;
+    }
+  }
 `;
 const Header = styled.div`
   background-image: linear-gradient(
@@ -135,13 +173,13 @@ const Header = styled.div`
     }
   }
 
-  @media (min-width: 500px) and (max-width: 584px) {
+  @media (min-width: 500px) and (max-width: 619px) {
     h1 {
       font-size: 85px;
     }
   }
 
-  @media (min-width: 585px) and (max-width: 700px) {
+  @media (min-width: 620px) and (max-width: 730px) {
     h1 {
       font-size: 100px;
     }
@@ -305,12 +343,9 @@ const Button = styled.button`
   color: black;
   border: 1px solid black;
   padding: 15px;
-  width: 25%;
-
   text-decoration: none;
   font-size: 16px;
   margin-top: 4%;
-
   background-color: #f6f6f6;
 `;
 
@@ -351,7 +386,7 @@ function App() {
           </h1>
         </div>
         <NavBar className="row middle-xs center-xs">
-          <NavItem className="col-xs-12 col-sm-6">
+          <NavItem className="col-xs-6">
             <h4>
               <Link
                 activeClass="active"
@@ -366,7 +401,7 @@ function App() {
               </Link>
             </h4>
           </NavItem>
-          <NavItem className="col-xs-12 col-sm-6">
+          <NavItem className="col-xs-6 ">
             <h4>
               <Link
                 activeClass="active"
@@ -390,13 +425,13 @@ function App() {
       </MeetMessage>
       <AboutWrapper className="row middle-xs center-xs">
         <Avatars id="about" className="col-xs-4">
-          <Elliot></Elliot>
+          <Elliot className="elliotimg"></Elliot>
         </Avatars>
         <Avatars className="col-xs-4 ">
-          <Wes></Wes>
+          <Wes className="wesimg"></Wes>
         </Avatars>
         <Avatars className="col-xs-4">
-          <Doug></Doug>
+          <Doug className="dougimg"></Doug>
         </Avatars>
       </AboutWrapper>
       <AboutWrapperInfo className="row center-xs">
@@ -425,7 +460,7 @@ function App() {
         </div>
       </AboutWrapperInfoTwo>
       <ContactWrapper className="row center-xs">
-        <div className="col-xs-12 col-sm-6">
+        <div className="col-xs-8 col-sm-6">
           <h1 id="contact">Contact Us</h1>
           <h2>We'd love to hear from you.</h2>
           <form name="contact" method="POST" data-netlify="true">

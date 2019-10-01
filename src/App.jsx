@@ -438,11 +438,11 @@ function App() {
         <Avatars id="about" className="col-xs-4">
           <Elliot className="elliotimg"></Elliot>
         </Avatars>
-        <Avatars className="col-xs-4 ">
-          <Wes className="wesimg"></Wes>
-        </Avatars>
         <Avatars className="col-xs-4">
           <Doug className="dougimg"></Doug>
+        </Avatars>
+        <Avatars className="col-xs-4 ">
+          <Wes className="wesimg"></Wes>
         </Avatars>
       </AboutWrapper>
       <AboutWrapperInfo className="row center-xs">
@@ -450,24 +450,35 @@ function App() {
           <h2>Elliot Bonneville</h2>
         </Avatars>
         <Avatars className="col-xs-4">
-          <h2>Wesley Bonneville</h2>
+          <h2>Douglas Bonneville</h2>
         </Avatars>
         <Avatars className="col-xs-4">
-          <h2>Douglas Bonneville</h2>
+          <h2>Wesley Bonneville</h2>
         </Avatars>
       </AboutWrapperInfo>
       <AboutWrapperInfoTwo className="row center-xs">
         <div className="col-xs-4">
-          <h4>Latrine Wiper</h4>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+          <h4>Founder, CEO</h4>
+          <p>
+            Elliot started Tandem Logic with the goal of building something
+            bigger than himself. He is both a full-stack engineer and people
+            person.
+          </p>
         </div>
         <div className="col-xs-4">
-          <h4>God Designer</h4>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+          <h4>Co-Founder, COO</h4>
+          <p>
+            Douglas is a veteran of the web industry and heads operations for
+            the company. He makes sure the work gets done and everybody takes
+            the weekends off.
+          </p>
         </div>
         <div className="col-xs-4">
-          <h4>"Lil" Douglas</h4>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+          <h4>Developer / Designer</h4>
+          <p>
+            Wesley loves to design and build beautiful web experiences. In his
+            spare time, he hikes, bikes, and writes novels.
+          </p>
         </div>
       </AboutWrapperInfoTwo>
       <ContactWrapper className="row center-xs">

@@ -175,7 +175,7 @@ const Header = styled.div`
 
   @media (min-width: 500px) and (max-width: 619px) {
     h1 {
-      font-size: 85px;
+      font-size: 75px;
     }
   }
 

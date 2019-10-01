@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-scroll";
+import elliot from "./images/elliot.png";
+import wes from "./images/Wes.png";
+import doug from "./images/doug.png";
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -10,11 +13,125 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const MeetMessage = styled.div`
+  margin-top: 12%;
+  margin-bottom: -10%;
+  & h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+`;
+
+const Avatars = styled.div`
+  display: flex;
+  justify-content: center;
+  @media (min-width: 150px) and (max-width: 350px) {
+    .elliotimg,
+    .wesimg,
+    .dougimg {
+      height: 50px;
+      width: 50px;
+    }
+    h2 {
+      font-size: 10px;
+    }
+  }
+  @media (min-width: 351px) and (max-width: 600px) {
+    .elliotimg,
+    .wesimg,
+    .dougimg {
+      height: 100px;
+      width: 100px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+  }
+  @media (min-width: 601 px) and (max-width: 950px) {
+    .elliotimg,
+    .wesimg,
+    .dougimg {
+      height: 120px;
+      width: 120px;
+    }
+  }
+`;
+
+const Elliot = styled.div`
+  background-image: url(${elliot});
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+`;
+
+const Wes = styled.div`
+  background-image: url(${wes});
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+`;
+
+const Doug = styled.div`
+  background-image: url(${doug});
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+`;
+
 const Wrapper = styled.div`
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 `;
 
+const AboutWrapperInfo = styled.div`
+  margin-top: -15%;
+  text-transform: uppercase;
+  & h2 {
+    font-weight: 400;
+  }
+`;
+
+const AboutWrapperInfoTwo = styled.div`
+  margin-top: -2.5%;
+  padding-bottom: 10%;
+
+  & h4 {
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+  & p {
+    font-size: 14px;
+    margin-left: 22%;
+    margin-right: 22%;
+  }
+  @media (min-width: 150px) and (max-width: 350px) {
+    p {
+      font-size: 8px;
+    }
+    h4 {
+      font-size: 10px;
+    }
+  }
+  @media (min-width: 351px) and (max-width: 600px) {
+    p {
+      font-size: 12px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+  }
+`;
 const Header = styled.div`
   background-image: linear-gradient(
     to right bottom,
@@ -64,13 +181,13 @@ const Header = styled.div`
     }
   }
 
-  @media (min-width: 500px) and (max-width: 584px) {
+  @media (min-width: 500px) and (max-width: 619px) {
     h1 {
-      font-size: 85px;
+      font-size: 75px;
     }
   }
 
-  @media (min-width: 585px) and (max-width: 700px) {
+  @media (min-width: 620px) and (max-width: 730px) {
     h1 {
       font-size: 100px;
     }
@@ -129,7 +246,7 @@ const ContactWrapper = styled.div`
 
   @media (min-width: 150px) and (max-width: 400px) {
     h1 {
-      font-size: 30px;
+      font-size: 25px;
     }
     h2 {
       font-size: 15px;
@@ -140,7 +257,10 @@ const ContactWrapper = styled.div`
   }
   @media (min-width: 401px) and (max-width: 700px) {
     h1 {
-      font-size: 50px;
+      font-size: 40px;
+    }
+    &&& h4 {
+      font-size: 15px;
     }
   }
 
@@ -234,12 +354,9 @@ const Button = styled.button`
   color: black;
   border: 1px solid black;
   padding: 15px;
-  width: 25%;
-
   text-decoration: none;
   font-size: 16px;
   margin-top: 4%;
-
   background-color: #f6f6f6;
 `;
 
@@ -280,7 +397,7 @@ function App() {
           </h1>
         </div>
         <NavBar className="row middle-xs center-xs">
-          <NavItem className="col-xs-12 col-sm-6">
+          <NavItem className="col-xs-6">
             <h4>
               <Link
                 activeClass="active"
@@ -295,7 +412,7 @@ function App() {
               </Link>
             </h4>
           </NavItem>
-          <NavItem className="col-xs-12 col-sm-6">
+          <NavItem className="col-xs-6 ">
             <h4>
               <Link
                 activeClass="active"
@@ -312,14 +429,60 @@ function App() {
           </NavItem>
         </NavBar>
       </Header>
-      <AboutWrapper className="row middle-xs center-xs">
-        <div id="about" className="col-xs-11">
-          <h1>Our team rapidly delivers flawless and aerodynamic content.</h1>
-          <h2>Hire Us Today</h2>
+      <MeetMessage className="row center-xs">
+        <div className="col-xs-12">
+          <h1>Meet the Team</h1>
         </div>
+      </MeetMessage>
+      <AboutWrapper className="row middle-xs center-xs">
+        <Avatars id="about" className="col-xs-4">
+          <Elliot className="elliotimg"></Elliot>
+        </Avatars>
+        <Avatars className="col-xs-4">
+          <Doug className="dougimg"></Doug>
+        </Avatars>
+        <Avatars className="col-xs-4 ">
+          <Wes className="wesimg"></Wes>
+        </Avatars>
       </AboutWrapper>
+      <AboutWrapperInfo className="row center-xs">
+        <Avatars id="about" className="col-xs-4">
+          <h2>Elliot Bonneville</h2>
+        </Avatars>
+        <Avatars className="col-xs-4">
+          <h2>Douglas Bonneville</h2>
+        </Avatars>
+        <Avatars className="col-xs-4">
+          <h2>Wesley Bonneville</h2>
+        </Avatars>
+      </AboutWrapperInfo>
+      <AboutWrapperInfoTwo className="row center-xs">
+        <div className="col-xs-4">
+          <h4>Founder, CEO</h4>
+          <p>
+            Elliot started Tandem Logic with the goal of building something
+            bigger than himself. He is both a full-stack engineer and people
+            person.
+          </p>
+        </div>
+        <div className="col-xs-4">
+          <h4>Co-Founder, COO</h4>
+          <p>
+            Douglas is a veteran of the web industry and heads operations for
+            the company. He makes sure the work gets done and everybody takes
+            the weekends off.
+          </p>
+        </div>
+        <div className="col-xs-4">
+          <h4>Developer / Designer</h4>
+          <p>
+            Wesley loves to design and build beautiful web experiences. In his
+            spare time, he hikes, bikes, and writes novels.
+          </p>
+        </div>
+      </AboutWrapperInfoTwo>
       <ContactWrapper className="row center-xs">
-        <div className="col-xs-12 col-sm-6">
+        <div className="col-xs-8 col-sm-6">
           <h1 id="contact">Contact Us</h1>
           <h2>We'd love to hear from you.</h2>
           <form name="contact" method="POST" data-netlify="true">

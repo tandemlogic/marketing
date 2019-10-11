@@ -1,20 +1,19 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
-import Image from '../components/Image';
 import SEO from '../components/Seo';
+import Card from '../components/Card';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Support and development for React applications.</h1>
+    <h2>Scalable, fast, and secure cloud-based apps to meet your needs.</h2>
+    <Card>
+      We don’t just build software -- we build solutions. Our team of engineers
+      is always available to help you support, expand, or develop your React or
+      React Native application or website.
+    </Card>
   </Layout>
 );
 
